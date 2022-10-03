@@ -117,35 +117,6 @@ public class Mensa extends RESTService {
     return Response.status(201).build();
 
 
-
-    // notfound
-    boolean notfound_condition = true;
-    if(notfound_condition) {
-      JSONObject notfound = new JSONObject();
-
-      
-
-      return Response.status(HttpURLConnection.HTTP_NOT_FOUND).entity(notfound.toJSONString()).build();
-    }
-    // badreq
-    boolean badreq_condition = true;
-    if(badreq_condition) {
-      JSONObject badreq = new JSONObject();
-
-      
-
-      return Response.status(HttpURLConnection.HTTP_BAD_REQUEST).entity(badreq.toJSONString()).build();
-    }
-    // created
-    boolean created_condition = true;
-    if(created_condition) {
-      JSONObject created = new JSONObject();
-
-      
-
-      return Response.status(HttpURLConnection.HTTP_CREATED).entity(created.toJSONString()).build();
-    }
-    return null;
   }
 
 
