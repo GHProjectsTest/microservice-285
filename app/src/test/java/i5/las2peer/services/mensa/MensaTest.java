@@ -118,32 +118,6 @@ public class MensaTest {
 
   /**
    * 
-   * Test for the Createdishratingfornonexistingdish_ID87996 method.
-   * 
-   */
-  @Test
-  public void testCreatedishratingfornonexistingdish_ID87996() {
-    MiniClientCoverage c = new MiniClientCoverage(mainPath);
-    c.setConnectorEndpoint(connector.getHttpEndpoint());
-    
-        
-    try {
-      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
-      ClientResponse result = c.sendRequest("POST", "/dishes/{id}/ratings", """
-{}""", "application/json", "*/*", new HashMap<>(), "9999");
-      System.out.println("Result of request with id: 72406: " + result.getResponse().trim());
-    
-      Assert.assertEquals("[685016]", 404, result.getHttpCode());
-
-    } catch (Exception e) {
-      e.printStackTrace();
-      fail("Exception: " + e);
-    }
-
-    
-  }
-  /**
-   * 
    * Test for the Successfulcreatedishratingtest_ID395443 method.
    * 
    */
