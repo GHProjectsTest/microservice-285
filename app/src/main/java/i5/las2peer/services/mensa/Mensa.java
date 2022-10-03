@@ -114,7 +114,7 @@ public class Mensa extends RESTService {
     // service method invocations
 
      
-    if(!body.equals("")) return Response.status(201).
+    if(!body.equals("")) return Response.status(201).build();
 
 
 
