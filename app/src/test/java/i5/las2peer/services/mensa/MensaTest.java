@@ -118,11 +118,11 @@ public class MensaTest {
 
   /**
    * 
-   * Test for the Successfulcreatedishratingtest_ID395443 method.
+   * Test for the Successfulcreatedishratingtest_ID50275 method.
    * 
    */
   @Test
-  public void testSuccessfulcreatedishratingtest_ID395443() {
+  public void testSuccessfulcreatedishratingtest_ID50275() {
     MiniClientCoverage c = new MiniClientCoverage(mainPath);
     c.setConnectorEndpoint(connector.getHttpEndpoint());
     
@@ -134,39 +134,9 @@ public class MensaTest {
   "stars": 5,
   "comment": "Delicious!"
 }""", "application/json", "*/*", new HashMap<>(), "1");
-      System.out.println("Result of request with id: 32631: " + result.getResponse().trim());
+      System.out.println("Result of request with id: 229951: " + result.getResponse().trim());
     
-      Assert.assertEquals("[98288]", 201, result.getHttpCode());
-  Object response = JSONValue.parse(result.getResponse().trim());
-      // Response body has field "id" has type Number
-      assertThat("[301193]", response, both(isA(JSONObject.class)).and(asJSONObject(hasField("id", isA(Number.class)))));
-      
-
-    } catch (Exception e) {
-      e.printStackTrace();
-      fail("Exception: " + e);
-    }
-
-    
-  }
-  /**
-   * 
-   * Test for the Createdishratingemptybodytest_ID835357 method.
-   * 
-   */
-  @Test
-  public void testCreatedishratingemptybodytest_ID835357() {
-    MiniClientCoverage c = new MiniClientCoverage(mainPath);
-    c.setConnectorEndpoint(connector.getHttpEndpoint());
-    
-        
-    try {
-      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
-      ClientResponse result = c.sendRequest("POST", "/dishes/{id}/ratings", """
-{}""", "application/json", "*/*", new HashMap<>(), "1");
-      System.out.println("Result of request with id: 539483: " + result.getResponse().trim());
-    
-      Assert.assertEquals("[471283]", 400, result.getHttpCode());
+      Assert.assertEquals("[854927]", 201, result.getHttpCode());
 
     } catch (Exception e) {
       e.printStackTrace();
